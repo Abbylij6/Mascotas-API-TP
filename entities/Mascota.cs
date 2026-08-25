@@ -2,6 +2,7 @@ namespace MascotasAPI
 {
     public abstract class Mascotas
     {
+        internal static readonly int Count;
         private int id;
 
         private string nombre;
