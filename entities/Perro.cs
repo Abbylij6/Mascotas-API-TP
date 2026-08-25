@@ -8,4 +8,9 @@ public class Perro : Mascotas
     {
         get{return this.raza;} set {raza = value;}
     }
+
+    public override string Tipo()
+    {
+        return "Perro";
+    }
 }

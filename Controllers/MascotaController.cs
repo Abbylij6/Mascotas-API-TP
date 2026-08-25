@@ -98,4 +98,25 @@ public class MascotaController : ControllerBase
         }
         return Ok(resultado);
     }
+
+    [HttpGet ("{tipo}")]
+    public IActionResult Tipo(string tipo)
+    {
+        List <Mascotas> resultado = new List<Mascotas>();
+        
+        foreach(Mascotas m in listmascotas)
+        {
+            if(tipo.ToLower() == "perro" && m is Perro)
+            {
+                resultado.Add(m);
+            }
+
+            if(tipo.ToLower() == "gato" && m is Gato)
+            {
+                resultado.Add(m);
+            }
+        }
+
+        return Ok(resultado);
+    }
 }

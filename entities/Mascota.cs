@@ -9,6 +9,8 @@ namespace MascotasAPI
 
         private int edad;
 
+        public abstract string Tipo();
+
         public int Id
         {
             get {return this.id;} set {id = value;}
