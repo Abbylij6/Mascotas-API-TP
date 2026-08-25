@@ -42,7 +42,7 @@ public class UserController : ControllerBase
 
         listmascotas.Add(nuevoperro);
 
-        return Ok("nuevo perro creado");
+        return StatusCode(201,"nuevo perro creado");
     }
 
     [HttpPost("Gato")]
@@ -52,7 +52,7 @@ public class UserController : ControllerBase
 
         listmascotas.Add(nuevoGato);
 
-        return Ok("nuevo gato creado");
+        return StatusCode(201,"nuevo gato creado");
     }
 
     [HttpPut("{id}")]
