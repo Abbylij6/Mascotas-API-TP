@@ -1,6 +1,6 @@
 namespace MascotasAPI
 {
-    public abstract class MascotasAPI
+    public abstract class Mascotas
     {
         private int id;
 
