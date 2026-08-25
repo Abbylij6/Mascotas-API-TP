@@ -11,22 +11,3 @@ La aplicación permite gestionar mascotas mediante operaciones CRUD, utilizando 
 - Encapsulamiento
 
 La información se almacena en memoria mediante una lista, por lo tanto no se utiliza base de datos.
-
-Estructura del proyecto
-
-```text
-ApiMascotas
-│
-├── Controllers
-│   └── MascotaController.cs
-│
-├── Models
-│   ├── Mascota.cs
-│   ├── Perro.cs
-│   └── Gato.cs
-│
-├── DTOs
-│   └── MascotaActualizarDto.cs
-│
-├── Program.cs
-└── README.md
