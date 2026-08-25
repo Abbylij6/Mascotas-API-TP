@@ -5,7 +5,7 @@ namespace Testing.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserController : ControllerBase
+public class MascotaController : ControllerBase
 {
     private static List<Mascotas> listmascotas = new List<Mascotas>
     {
@@ -18,7 +18,7 @@ public class UserController : ControllerBase
     [HttpGet]
     public IActionResult get()
     {
-        return Ok();
+        return Ok(listmascotas);
     }
 
     [HttpGet("{id}")]
@@ -82,5 +82,20 @@ public class UserController : ControllerBase
             }
         }
         return NotFound("mascota no encontrada");
+    }
+
+    [HttpGet("{edad}")]
+    public IActionResult MayoresA(int edad)
+    {
+        List<Mascotas> resultado = new List<Mascotas>();
+
+        foreach (Mascotas m in listmascotas)
+        {
+            if(m.Edad > edad)
+            {
+                resultado.Add(m);
+            }
+        }
+        return Ok(resultado);
     }
 }
